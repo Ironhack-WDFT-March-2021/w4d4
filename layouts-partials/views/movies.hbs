@@ -1,17 +1,21 @@
 <h1>Movies 📽</h1>
 {{#each moviesList}}
-    <h2>
-        {{title}}
-    </h2>
-    <p>
-        Year: {{year}}
-    </p>
-    <p>
-        Director: {{director}}
-    </p>
-    <ul>
-        {{#each genre}}
-            <li>{{this}}</li>
-        {{/each}}
-    </ul>
+
+    {{> movieCard this}}
+
+{{!-- All this is now in the movieCard Partial --}}
+{{!-- <h2>
+    {{this.title}}
+</h2>
+<p>
+    Year: {{this.year}}
+</p>
+<p>
+    Director: {{this.director}}
+</p>
+<ul>
+    {{#each this.genre}}
+        <li>{{this}}</li>
+    {{/each}}
+</ul> --}}
 {{/each}}
